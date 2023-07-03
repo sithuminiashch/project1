@@ -1,0 +1,26 @@
+object Q1 {
+  def calculate (deposite: Double) : Double = {
+    val rate=
+    if(deposite <= 20000)
+      {
+         0.02;
+      }
+    else if(deposite <= 200000)
+      {
+         0.04;
+      }
+    else
+      {
+         0.035;
+      }
+
+    deposite * rate ;
+  }
+
+  def main (args : Array [String]) : Unit = {
+    val deposite = 500000;
+    val interest = calculate(deposite);
+    println (s"The interest earned on Rs.$deposite is Rs.$interest");
+  }
+
+}
